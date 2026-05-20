@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaCore Commerce</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+
+    <section class="auth-container" id="authContainer">
+
+        <div class="auth-left">
+
+            <h1>NovaCore Commerce</h1>
+
+            <p>
+
+                Plataforma premium de tecnologia, games e marketplace.
+
+            </p>
+
+        </div>
+
+        <div class="auth-box">
+
+            <div class="tabs">
+
+                <button onclick="mostrarLogin()" class="active">
+
+                    Login
+
+                </button>
+
+                <button onclick="mostrarCadastro()">
+
+                    Cadastro
+
+                </button>
+
+            </div>
+
+            <!-- LOGIN -->
+
+            <div id="loginForm">
+
+                <h2>Entrar</h2>
+
+                <input type="email" id="loginEmail" placeholder="Seu email">
+
+                <input type="password" id="loginSenha" placeholder="Sua senha">
+
+                <button onclick="fazerLogin()" class="btn-auth">
+
+                    Entrar
+
+                </button>
+
+            </div>
+
+            <!-- CADASTRO -->
+
+            <div id="cadastroForm" class="hidden">
+
+                <h2>Criar Conta</h2>
+
+                <input type="text" id="cadastroNome" placeholder="Seu nome">
+
+                <input type="email" id="cadastroEmail" placeholder="Seu email">
+
+                <input type="password" id="cadastroSenha" placeholder="Sua senha">
+
+                <button onclick="fazerCadastro()" class="btn-auth">
+
+                    Criar Conta
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LOJA -->
+
+    <section class="container hidden" id="loja">
+
+        <header>
+
+            <div>
+
+                <h1>NovaCore Commerce</h1>
+
+                <p id="usuarioLogado"></p>
+
+            </div>
+
+            <div class="header-buttons">
+
+                <button onclick="trocarTema()">
+
+                    🌙 / ☀️
+
+                </button>
+
+                <button onclick="logout()">
+
+                    🚪 Sair
+
+                </button>
+
+            </div>
+
+        </header>
+
+        <!-- PESQUISA -->
+
+        <div class="pesquisa-box">
+
+            <input
+                type="text"
+                id="pesquisa"
+                placeholder="Pesquisar produtos..."
+                onkeyup="pesquisarProduto()"
+            >
+
+        </div>
+
+        <!-- CUPOM -->
+
+        <div class="cupom-box">
+
+            <input
+                type="text"
+                id="cupom"
+                placeholder="Cupom de desconto"
+            >
+
+            <button onclick="aplicarCupom()">
+
+                Aplicar Cupom
+
+            </button>
+
+        </div>
+
+        <!-- CATEGORIAS -->
+
+        <div class="categorias">
+
+            <button onclick="filtrarCategoria('Todos')">
+
+                Todos
+
+            </button>
+
+            <button onclick="filtrarCategoria('Games')">
+
+                Games
+
+            </button>
+
+            <button onclick="filtrarCategoria('Tecnologia')">
+
+                Tecnologia
+
+            </button>
+
+            <button onclick="filtrarCategoria('Mercado')">
+
+                Mercado
+
+            </button>
+
+        </div>
+
+        <!-- PRODUTOS -->
+
+        <div class="produtos" id="produtos"></div>
+
+        <!-- CARRINHO -->
+
+        <div class="carrinho">
+
+            <h2>🛒 Carrinho</h2>
+
+            <div id="carrinho"></div>
+
+        </div>
+
+        <!-- TOTAL -->
+
+        <div class="total">
+
+            <h2>
+
+                Total:
+                R$ <span id="total">0.00</span>
+
+            </h2>
+
+            <p id="freteTexto">
+
+                Frete: R$ 29.90
+
+            </p>
+
+            <button class="finalizar" onclick="finalizarCompra()">
+
+                Finalizar Compra
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>>
